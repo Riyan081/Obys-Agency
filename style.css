@@ -1,8 +1,11 @@
+
+/* Use 'Plain Light' as default font, with fallbacks for better compatibility */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,300&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Plain Light";
+  font-family: "Plain Light", Arial, sans-serif;
   color: white;
 }
 
@@ -10,6 +13,16 @@ html,
 body {
   height: 100%;
   width: 100%;
+}
+
+#cursor{
+  height:2.5vw;
+  width:2.5vw;
+  border-radius: 50%;
+  position:fixed;
+  z-index:999;
+  border:1px solid #f6eded;
+  transform: translate(-50%,-50%);
 }
 
 #main {
@@ -24,8 +37,9 @@ body {
   width: 100%;
   position: fixed;
   background-color: #0b0b0b;
-  z-index: 999;
+  z-index: 998;
   padding: 16vh 8vw;
+  overflow:hidden;
 }
 
 .line {
@@ -109,4 +123,59 @@ body {
   height: 100vh;
   width: 100%;
   background-color: #151515;
+}
+
+#page1 #nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:7vh 5.5vw;
+}
+
+#nav #nav-part2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins Thin', 'Poppins', 'Plain Light', Arial, sans-serif;
+  font-size: 1vw;
+  font-weight: 100;
+  gap: 2.4vw;
+}
+
+
+.hero{
+  margin-left:29%;
+  overflow:hidden; 
+  position:relative;
+  z-index:9999;
+  display:flex;
+
+  
+}
+
+.hero h1{
+  font-size:7vw;
+  text-transform: uppercase;
+  line-height:7vw;
+  letter-spacing: 5px;
+  
+
+}
+
+.hero:nth-child(2){
+  margin-top:100px;
+}
+.hero h2, .hero h3{
+  font-size:7vw;
+   text-transform: uppercase;
+  line-height:7vw;
+  letter-spacing: 5px;
+
+}
+
+.hero h2:hover {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  font-weight:500;
+
 }
