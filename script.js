@@ -62,7 +62,7 @@ t1.from("#nav",{
 })
 
 t1.from("#hero1 h1,#hero2 h1,#hero3 h2,#hero4 h1",{
-    y:120,
+    y:140,
     stagger:0.2,
 })
 }
@@ -76,6 +76,8 @@ Shery.makeMagnet("#nav-part2 p" /* Element to target.*/, {
   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
   duration: 1,
 });
+
+
 
 
 
