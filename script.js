@@ -34,7 +34,7 @@ t1.from("#line1-part1", {
 });
 
 t1.to(" .line h2",{
-    animationName:"anime",
+    animationName:"animes",
     opacity:1
 
 })
