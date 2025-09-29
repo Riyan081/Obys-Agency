@@ -141,7 +141,7 @@ body {
 
 .hero {
   margin-left: 29%;
-   overflow-y: hidden; 
+  overflow-y: hidden;
   position: relative;
   z-index: 9999;
   display: flex;
@@ -153,9 +153,6 @@ body {
   line-height: 7vw;
   letter-spacing: 5px;
 }
-
-
-
 
 .hero:nth-child(2) {
   margin-top: 100px;
@@ -225,13 +222,143 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  opacity:0;
 }
 
 #page3 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: rgb(61, 61, 61);
   position: relative;
+  padding: 7vh 2vw;
+}
+
+#page3 h1 {
+  font-size: 7vw;
+  text-transform: uppercase;
+  margin-left: 28vw;
+  position: relative; /* <-- Add this line */
+}
+
+#page3 .underline {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  margin-top: 5vw;
+  margin-bottom: 3vw;
+  margin-left: 28vw;
+}
+#page3 h1::before {
+  content: "02";
+  position: absolute;
+  font-size: 3vw;
+  font-family: "silk serif";
+  font-weight: 100;
+  left: -15%;
+  top: 7%;
+}
+
+#image-div-container {
+  padding: 1vw;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 5vw;
+}
+
+.image-div {
+  height: 33vw;
+  width: 22vw;
+  background-color: blue;
+  overflow: hidden;
+  margin: 1vw;
+
+  flex-shrink: 0;
+}
+
+.image-div:nth-child(1) {
+  height: 29vw;
+  width: 20vw;
+}
+
+.image-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 1vw;
+}
+
+.page3-circle1 {
+  height: 20vw;
+  width: 20vw;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 23vh;
+  margin-left: 10vw;
+  position: relative;
+}
+
+.page3-circle2 {
+  height: 20vw;
+  width: 20vw;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8vh;
+  margin-right: 5vw;
+  position: relative;
+}
+
+.page3-circle1 svg {
+  height: 40%;
+}
+
+.page3-circle2 svg {
+  height: 40%;
+  transform: rotate(-45deg);
+}
+
+.circle-in {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.3s;
+  border-radius: 50%;
+  transform: scale(0);
+  pointer-events: none;
+}
+.circle-in p {
+  font-size: 0.85vw;
+  color: #0b0b0b;
+  width: 60%;
+  transform: scale(0);
+  transition: all ease 0.3s;
+  transition-delay: 0.2s;
+  opacity: 0;
+}
+
+.page3-circle1:hover .circle-in {
+  transform: scale(1);
+}
+
+.page3-circle1:hover p {
+  transform: scale(1);
+  opacity: 1;
 }
 
 #page4 {
@@ -348,11 +475,8 @@ body {
   text-transform: uppercase;
   display: inline-block;
   margin-right: 16px;
-  animation-name: anime;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transform: translateX(calc(-100% - 20px));
+
+  
   animation-name: anime;
   animation-direction: reverse;
   animation-duration: 10s;
@@ -387,7 +511,7 @@ body {
   width: 100%;
   background-color: rgb(0, 0, 0);
   padding-left: 28vw;
-  padding-right:2vw;
+  padding-right: 2vw;
 }
 
 #footer h1 {
@@ -398,15 +522,14 @@ body {
   position: relative;
 }
 
-#footer h1::before{
-  content:"04";
-  position:absolute;
-  font-size:3vw;
-  font-family:"silk serif";
-  font-weight:100;
-  left:-15%;
-  top:7%;
-
+#footer h1::before {
+  content: "04";
+  position: absolute;
+  font-size: 3vw;
+  font-family: "silk serif";
+  font-weight: 100;
+  left: -15%;
+  top: 7%;
 }
 
 .underline {
@@ -416,30 +539,48 @@ body {
   margin: 3vw 0;
 }
 
-#footer-div{
+#footer-div {
   display: flex;
   justify-content: space-between;
- align-items: flex-start;
-  padding-right:3vw;
-  padding-top:3vw;
-  padding-bottom:3vw;
- 
+  align-items: flex-start;
+  padding-right: 3vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
 }
 
-
-#footer-div h6{
-  font-size:1vw;
-  margin-bottom:1.5vw;
+#footer-div h6 {
+  font-size: 1vw;
+  margin-bottom: 1.5vw;
 }
 
-#footer-div h5{
-  font-size:1.4vw;
-  margin-top:0.2vw;
+#footer-div h5 {
+  font-size: 1.4vw;
+  margin-top: 0.2vw;
   font-weight: 500;
-  
 }
 
-#footer> h5{
-  font-weight:500;
-  font-size:1.2vw;
+#footer > h5 {
+  font-weight: 500;
+  font-size: 1.2vw;
+}
+
+/* this is for that effect 3d one from sherry lib */
+.canvas_container {
+  z-index: 9999999 !important;
+}
+
+
+#flag{
+  height:20vw;
+  position:absolute;
+  top:0;
+  left:0;
+  transform:translate(-50%,-50%);
+  opacity:0;
+
+}
+
+
+#hero3{
+  position: relative;
 }
